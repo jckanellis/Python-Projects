@@ -15,8 +15,10 @@ df['PB'] = pd.to_numeric(df['PB'])
 pro_bowls = df.groupby('Round')['PB'].sum()
 
 # Plot number of Pro Bowlers by draft round
-fig = plt.figure()
-ax = fig.add_axes([0,0,1,1])
 round = np.arange(1, 8, 1).tolist()
-ax.bar(round, pro_bowls)
+
+plt.bar(round, pro_bowls)
+plt.xlabel('Draft Round')
+plt.ylabel('# of Pro Bowls')
+plt.title(f'Pro Bowls by Draft Round {season_start} - {season_stop}')
 plt.show()
