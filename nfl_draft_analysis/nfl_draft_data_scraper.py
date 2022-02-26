@@ -1,4 +1,3 @@
-
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -6,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define Start/Stop range
-season_start = 2006
+season_start = 2000
 season_stop = 2021
 
 # Grab column headers from first URL in range (assuming all column headers are the same for each dataset)
